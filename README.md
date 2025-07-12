@@ -83,6 +83,10 @@ Base URL: `http://localhost:8000/api`
 - `GET /admin/reports` - Lihat semua pengaduan (admin)
 - `PUT /admin/reports/{id}` - Update status pengaduan (admin)
 
+## DOCUMENTATION
+
+[Postman](https://documenter.getpostman.com/view/12581293/2sB34fo2AR) - Postman Documentation
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
