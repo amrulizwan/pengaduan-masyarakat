@@ -23,3 +23,10 @@ Route::middleware(['auth:api'])->group(function() {
         Route::get('statistics', [AdminReportController::class, 'statistics']);
     });
 });
+
+Route::fallback(function() {
+    return response()->json([
+        'success' => false,
+        'message' => 'API endpoint not found'
+    ], 404);
+});
