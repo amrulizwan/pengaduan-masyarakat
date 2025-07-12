@@ -9,7 +9,7 @@ Sistem API untuk pengaduan masyarakat berbasis Laravel dengan autentikasi JWT. S
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/amrulizwan/pengaduan
+git clone https://github.com/amrulizwan/pengaduan-masyarakat
 cd pengaduan-masyarakat
 ```
 
