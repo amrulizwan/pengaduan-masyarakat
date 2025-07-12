@@ -16,6 +16,13 @@ Route::middleware(['auth:api'])->group(function() {
 
     Route::apiResource('reports', ReportController::class)->only(['index', 'store', 'show']);
 
+    Route::put('profile', [AuthController::class, 'updateProfile']);
+    Route::patch('profile', [AuthController::class, 'updateProfile']);
+
+    Route::delete('reports/{report}', [ReportController::class, 'delete'])->middleware('can:delete-report,report');
+    Route::put('reports/{report}', [ReportController::class, 'update'])->middleware('can:update-report,report');
+    Route::patch('reports/{report}', [ReportController::class, 'update'])->middleware('can:update-report,report');
+
     Route::middleware('can:isAdmin')->prefix('admin')->group(function() {
         Route::get('reports', [AdminReportController::class, 'index']);
         Route::get('reports/{report}', [AdminReportController::class, 'show']);

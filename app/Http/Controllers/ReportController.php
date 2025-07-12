@@ -61,4 +61,44 @@ class ReportController extends Controller
             'data' => $report
         ]);
     }
+
+    public function update(Request $request, Report $report)
+    {
+        if ($report->status !== 'menunggu') {
+            return response()->json([
+                'success' => false,
+                'message' => 'Only reports with status "menunggu" can be updated'
+            ], 403);
+        }
+
+        $validatedData = $request->validate([
+            'title' => 'string|max:255',
+            'description' => 'string|max:1000',
+        ]);
+
+        $report->update($validatedData);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Report updated successfully',
+            'data' => $report
+        ]);
+    }
+
+    public function delete(Report $report)
+    {
+        if ($report->status !== 'menunggu') {
+            return response()->json([
+                'success' => false,
+                'message' => 'Only reports with status "menunggu" can be deleted'
+            ], 403);
+        }
+
+        $report->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Report deleted successfully'
+        ]);
+    }
 }
