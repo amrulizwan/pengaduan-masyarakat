@@ -1,5 +1,17 @@
 # Sistem Pengaduan Masyarakat
 
+##### Proyek ini untuk memenuhi tugas Ujian Akhir Semester Mata Kuliah Web Services
+
+Anggota Kelompok :
+
+> 2201040003 - Amrul Izwan
+
+> 2201040014 - Muhammad Farel Bayu Praditya
+
+> 2201040002 - Muhammad Rezaldi Hidayat
+
+> 2201040012 - Muhammad Adam Zikrillah
+
 ## Deskripsi Singkat
 
 Sistem API untuk pengaduan masyarakat berbasis Laravel dengan autentikasi JWT. Sistem ini memungkinkan masyarakat untuk mengirim pengaduan dan admin untuk mengelola serta menanggapi pengaduan tersebut.
